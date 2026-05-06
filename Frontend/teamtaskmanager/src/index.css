@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ink-900 text-ink-100 font-sans antialiased;
+  }
+  * {
+    @apply border-ink-700;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-volt-400 text-ink-900 font-semibold px-4 py-2 rounded-lg hover:bg-volt-300 transition-all duration-200 text-sm;
+  }
+  .btn-secondary {
+    @apply bg-ink-700 text-ink-100 font-medium px-4 py-2 rounded-lg hover:bg-ink-600 transition-all duration-200 text-sm;
+  }
+  .btn-danger {
+    @apply bg-red-900/40 text-red-400 font-medium px-4 py-2 rounded-lg hover:bg-red-900/60 transition-all duration-200 text-sm border border-red-800/50;
+  }
+  .card {
+    @apply bg-ink-800 border border-ink-700 rounded-xl p-5;
+  }
+  .input-field {
+    @apply w-full bg-ink-700 border border-ink-600 rounded-lg px-3 py-2.5 text-ink-100 placeholder-ink-400 focus:outline-none focus:border-volt-400 focus:ring-1 focus:ring-volt-400/30 transition-all duration-200 text-sm;
+  }
+  .badge-todo {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ink-700 text-ink-300 border border-ink-600;
+  }
+  .badge-progress {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber/20 text-amber border border-amber/30;
+  }
+  .badge-done {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-teal/20 text-teal border border-teal/30;
+  }
+  .badge-overdue {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-coral/20 text-coral border border-coral/30;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #14142e; }
+::-webkit-scrollbar-thumb { background: #2d2d62; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a7c; }
